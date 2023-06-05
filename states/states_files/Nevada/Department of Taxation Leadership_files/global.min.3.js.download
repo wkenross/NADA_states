@@ -1,0 +1,209 @@
+﻿var _gaq = _gaq || [],
+    _site_counter = 0,
+    master_thisSite = "site:" + window.location.hostname.replace(".staging", "") + " ",
+    activeFocus = null;
+    _gaq.push(["_setAccount", "UA-23725043-1"]);
+    _gaq.push(["_setDomainName", "nv.gov"]);
+    _gaq.push(["_trackPageview"]);
+    _gaq.push(["_trackPageLoadTime"]);
+
+(function () {
+    var a = document.createElement("script");
+    a.type = "text/javascript";
+    a.async = !0;
+    a.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+    var c = document.getElementsByTagName("script")[0];
+    c.parentNode.insertBefore(a, c);
+})();
+
+$(document).ready(function () {
+    global_cleanADASingle();
+    global_cleanADARepeat();
+    global_makeRadioSearch();
+    $("#master_printBtn").click(function () {
+        $(".master_hidePrint").hide();
+        $("body").addClass("master_makePrint");
+        window.print();
+    });
+    window.onafterprint = function () {
+        $(".master_hidePrint").show();
+        $("body").removeClass("master_makePrint");
+    };
+    $("input[type=radio][name=MasterSearch]").change(function () {
+        var a = $("#gsc-i-id1").val();
+        a = a.replace(master_thisSite, "");
+        $("#gsc-i-id1").val($(this).data("fill") + a);
+    });
+    $("#header").on("focusin", "#gsc-i-id1", function () {
+        $(this).val($(this).val().replace(master_thisSite, ""));
+    });
+    $("#header").on("focusout", "#gsc-i-id1", function () {
+        global_googleSearchFill();
+    });
+    setTimeout(function () {
+        $("#gsc-i-id1").attr("onkeydown", "global_quickFill(event);");
+    }, 1500);
+    $("#navigation ul li").focusout(function () {
+        $(this).find("ul").fadeOut("fast");
+    });
+    $("#navigation ul li").focusin(function () {
+        $(this).find("ul").fadeIn("fast");
+    });
+    $("#global_showSearch").click(function () {
+        console.log("hit");
+        $(".global-headerBar").slideUp("fast");
+        $(".global_search").slideDown("fast");
+        $("#gsc-i-id1").focus();
+    });
+    $("#global_closeSearch").click(function () {
+        $(".global-headerBar").slideDown("fast");
+        $(".global_search").slideUp("fast");
+    });
+    global_linkUpdate();
+    global_updateHelp();
+    global_updateVersion();
+});
+
+function global_updateHelp() {
+    $(".global-updateHelp").each(function () {
+        "undefined" !== typeof $(this).attr("href") && $(this).attr("href", $(this).attr("href") + "?host=" + global_getHost());
+    });
+}
+
+function global_quickFill(a) {
+    13 === a.which && global_googleSearchFill();
+}
+
+function global_googleSearchFill() {
+    var a = "";
+    0 < $("input[name=MasterSearch]:checked").length && (a = $("input[name=MasterSearch]:checked").data("fill"));
+    $("#gsc-i-id1").val(a + $("#gsc-i-id1").val());
+}
+
+function global_makeRadioSearch() {
+    $("input[type=radio][name=MasterSearch]").each(function () {
+        "t" === $(this).data("thissite") ? $(this).data("fill", master_thisSite) : $(this).data("fill", "");
+    });
+}
+
+function global_cleanADASingle() {
+    $("#FloatBubble").attr("aria-hidden", "true");
+    $("#FloatBubbleT").attr("aria-hidden", "true");
+    $("#EkBubbleTable").hide().attr("aria-hidden", "true");
+    $("#EkBubbleTableT").hide().attr("aria-hidden", "true");
+    $(".aspNetHidden").attr("aria-hidden", "true");
+    global_killEmpty("h1 h2 h3 h4 ul li".split(" "));
+    if (0 === $(document).prop("title").length) {
+        var a =
+            0 < $("#header_division").text().trim() ? $("#header_division").text().trim() : 0 < $("#header_department").text().trim() ? $("#header_department").text().trim() : location.href.substring(0, location.href.lastIndexOf("/") + 1);
+        $(document).prop("title", a);
+    }
+}
+
+function global_killEmpty(a) {
+    $.each(a, function (a, b) {
+        $(b).each(function () {
+            0 === $(this).html().length && $(this).remove();
+        });
+    });
+}
+
+function global_cleanADARepeat() {
+    $("#twitter-widget-0").attr("title", "Twitter Feed");
+    $("table").each(function () {
+        $(this).removeAttr("cellspacing").removeAttr("cellpadding");
+    });
+    $("img").each(function () {
+        $(this).removeAttr("border");
+    });
+    $("iframe").each(function (a, c) {
+        /*$(this).removeAttr("style allowfullscreen frameborder z-index position allowtransparency scrolling allow tabindex marginheight marginwidth vspace");*/
+        -1 < $(this).prop("id").indexOf("oauth2relay") && $(this).attr("title", "Google iFrame");
+    });
+    $("#___gcse_0").css({ background: "none", border: "none", padding: "0" });
+    $(".gsc-control-cse").css({ background: "none", border: "none", margin: "0px", padding: "0px" });
+    $("#goog-gt-tt").attr("aria-hidden", "true");
+    $("#FloatBubble").attr("aria-hidden", "true");
+    $("#FloatBubbleT").attr("aria-hidden", "true");
+    $('img[src="https://www.google.com/images/cleardot.gif"]').attr("alt", "Google Translate").attr("aria-hidden", "true");
+    $("#EkClose").attr("alt", "Close Image");
+    $("#EkCloseT").attr("alt", "Close Image");
+    $("iframe.skiptranslate").hide();
+
+    5 > _site_counter && (_site_counter++, setTimeout(global_cleanADARepeat, 300));
+}
+
+function global_linkUpdate() {
+    var a = "pdf xls xlsx doc docx zip exe ppt pptx mp3 wmv mp4 webm avi".split(" "),
+        c = window.location.hostname,
+        b,
+        e,
+        f,
+        k,
+        g,
+        l = 0 === $("#master_adaDisplayLogo").length ? !1 : $("#master_adaDisplayLogo").data("display");
+    $("a").each(function () {
+        e = !1;
+        b = "undefined" !== typeof $(this).attr("href") ? $(this).attr("href").trim() : "";
+        g = "";
+        k = !1;
+        if (0 < b.length) {
+            f = b.split(".").pop().toLowerCase();
+            "undefined" !== typeof $(this).attr("target") && (k = "_blank" === $(this).attr("target").toLowerCase());
+            b.startsWith("http://") || b.startsWith("https://")
+                ? b.replace("http://", "").replace("https://", "").split("/")[0].toLowerCase() == c && ((b = b.replace("http://", "").replace("https://", "")), (e = !0))
+                : b.startsWith("#") || ((b = b.startsWith("/") ? c + b : location.host + location.pathname + b), (e = !0));
+            k && (g = " Opens in New Window");
+            if (a.includes(f)) {
+                if (((g += " (" + f.toUpperCase() + ")"), e)) {
+                    var d = l ? "Document is compliant. Select if any issues - " : "Request Document Remediation - ";
+                    if (0 === $(this).text().trim().length) {
+                        var h = $(this).find("img");
+                        d = 0 < h.length ? (h[0].hasAttribute("alt") ? d + h.attr("alt").replace(/['"]+/g, "") : d) : d;
+                    } else d += $(this).text().replace(/['"]+/g, "");
+                    h = l ? "/layouts/master/images/transparentDot.png" : "/layouts/master/images/127_Wheelchair_symbol.png";
+                    var m = encodeURI("http://adahelp.nv.gov/remediation?host=" + global_getHost() + "&page=" + window.location + "&doc=http://" + b);
+                    $(this).after('<a href="' + m + '" class="remediate-link"><img src="' + h + '" title="' + d + '" alt="' + d + '" ' + (l ? 'class="remediate_logoSmall"' : 'class="remediate_logo"') + " /></a>");
+                }
+            } else e = !1;
+            0 < g.length && $(this).attr("title", g);
+            e &&
+                $(this).click(function () {
+                    b = $(this).attr("href");
+                    f = b.split(".").pop();
+                    _gaq.push(["_trackEvent", "Download", "Click-" + f, b]);
+                    var a = $(this).attr("href");
+                    if (k || "pdf" === f)
+                        return (
+                            setTimeout(function () {
+                                location.href = a;
+                            }, 200),
+                            !1
+                        );
+                });
+        }
+    });
+}
+
+function global_getHost() {
+    return window.location.host.replace(".staging", "");
+}
+
+function global_updateVersion() {
+    $.get("/Layouts/version.xml").done(function (a) {
+        a = a.documentElement.innerHTML;
+        var c = a.indexOf("<current>"),
+            b = a.lastIndexOf("</current>");
+        -1 < c && -1 < b && c < b && $("#footer_version").html(a.substring(c + 9, b));
+    });
+}
+
+String.prototype.startsWith = function (a, c) {
+    return this.substr(!c || 0 > c ? 0 : +c, a.length) === a;
+};
+
+Array.prototype.includes = function (a) {
+    var c = !1;
+    -1 !== this.indexOf(a) && (c = !0);
+    return c;
+};

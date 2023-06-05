@@ -1,0 +1,139 @@
+# Create APP_Metrics_Update Markdown file for sales
+    - App Metrics and Pendo Sales directories
+        cd c:\projects\metrics; dir
+        cd Pendo_sales; dir
+        code 3a_Training_APP_Pendo.txt
+    - First Training module Markup
+        C:\projects\Metrics\Pendo_sales\; dir
+        code 3a_Pendo_sales_cheat_sheet.md
+        --Publish HTML version
+            -Ctrl+Shift+P : Markdown All in One: Print Documents to HTML
+
+            --Code to run the convert process
+                cd $env:userprofile\.vscode\extensions; dir
+                cd C:\projects\Metrics\Pendo_sales\; dir
+                code -r --extensionDevelopmentPath="$env:userprofile\.vscode\extensions\yzhang.markdown-all-in-one-3.5.1" -n -w -g "{activeEditorFilePath}"
+            
+            --Consider creating a task
+                code Create_convert_HMTL.txt
+
+    - Publish App_Metrics_Report workbook to Sharepoint
+        - Publish latest App_Metrics_Report workbook to sharepoint for viewing by sales
+            cd C:\projects\Metrics\app_metrics; dir
+            start _App_metrics_update.xlxm
+            --Add VBA macro sheet to the file
+                code add_macro_xlsm.py
+                py add_macro_xlsm.py "App_metrics_update.xlsm"
+
+            --xlwings_pro is needed for some of the functionality like deleting macro sheets
+                py -m pip install "xlwings"
+                PY -m pip show "xlwings"
+                cd C:\Users\kenrossiter\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages
+
+                py -m pip install xlwings license update -k eyJwcm9kdWN0cyI6IFsicHJvIiwgInJlcG9ydHMiXSwgInZhbGlkX3VudGlsIjogIjIwMjMtMDYtMjIiLCAibGljZW5zZV90eXBlIjogInRyaWFsIn0=45ce9
+               
+                py -m pip install xlwings[pro] --extra-index-url=https://pypi.xlwings.org --trusted-host pypi.xlwings.org --upgrade --force --no-cache-dir --no-binary=:all: --user --force-reinstall --install-option="--install-data=$HOME" --install-option="--license-key='eyJwcm9kdWN0cyI6IFsicHJvIiwgInJlcG9ydHMiXSwgInZhbGlkX3VudGlsIjogIjIwMjMtMDYtMjIiLCAibGljZW5zZV90eXBlIjogInRyaWFsIn0=45ce9'"
+                py -m pip install xlwings[pro] --global-option="--xlwings-license='eyJwcm9kdWN0cyI6IFsicHJvIiwgInJlcG9ydHMiXSwgInZhbGlkX3VudGlsIjogIjIwMjMtMDYtMjIiLCAibGljZW5zZV90eXBlIjogInRyaWFsIn0=45ce9'"
+                
+                
+                py -m pip install --upgrade pip
+                py -m pip install xlwings[pro] --extra-index-url=https://pypi.xlwings.org --trusted-host pypi.xlwings.org --upgrade --force --no-cache-dir --no-binary=:all: --user --force-reinstall --install-option="--install-data=$HOME" --install-option="--license-key='eyJwcm9kdWN0cyI6IFsicHJvIiwgInJlcG9ydHMiXSwgInZhbGlkX3VudGlsIjogIjIwMjMtMDYtMjIiLCAibGljZW5zZV90eXBlIjogInRyaWFsIn0=45ce9'"
+                py -m pip install xlwings[pro] --global-option="--xlwings-license='eyJwcm9kdWN0cyI6IFsicHJvIiwgInJlcG9ydHMiXSwgInZhbGlkX3VudGlsIjogIjIwMjMtMDYtMjIiLCAibGljZW5zZV90eXBlIjogInRyaWFsIn0=45ce9'"
+            --Convert xlsm to xlsx 
+                code convert_xlsm.py
+                --Check_tasklist and kill hung Excel process if needed
+                    tasklist
+                    Get-Process excel
+                    Stop-process -Id 16476 -Force
+                --Run_python passing in the XLSM workbook name
+                    py convert_xlsm.py "App_metrics_update.xlsm"
+                    cd C:\projects\Metrics\app_metrics; dir
+               
+        - Upload macro free App_Metrics_Update.xlsm to sharepoint site
+            --Sharepoint -Asset_Inteligence -Product -App_Metrics
+                https://randallreilly.sharepoint.com/:f:/s/AssetIntelligence-Product/EsDjbMAJ6BtGvIhpQ-s3mI4Bga4lYMokdw1dn9Almav8UA?e=Ooqdpr
+
+            https://randallreilly.sharepoint.com/:x:/s/AssetIntelligence-Product/EeMjXEAcX0NOnar7b6QS3UsBdzPKVrUyRdz_S_9qmdMfUw?e=DzHaXj
+
+        - Save APP_Metrics_Report as markdown file to use in instructions
+            cd $env:OneDrive\Desktop\RI\Product_Metrics\App_Metrics; dir
+            cp $env:OneDrive\Desktop\RI\Product_Metrics\App_Metrics\App_Metrics_Report.docx c:\projects\metrics\App_Metrics\
+            cd c:\projects\metrics\App_Metrics; dir
+            code App_Metrics_Report.docx
+
+            --Use Python docx2md library
+                https://www.google.com/search?q=%22installing+docx2md+python+package%22+OR+%22docx2md+python+package+installation+guide%22
+                py -m pip install python-docx2md
+-
+# Transfer Pendo Metrics to APP_metrics_update.xlsm and edit sales cheat sheet
+    - Open Pendo Metrics Sales Cheat Sheet and add summary
+        C:\projects\Metrics\Pendo_sales\; dir
+        code 3b_Pendo_metrics_cheat_sheet.md
+
+    - Open APP_Metrics_update and copy in statistics from Monthly_pendo_pages
+        cd c:\projects\metrics\APP_Metrics; dir
+        start APP_metrics_update.xlsm
+
+    - Copy Time ON site and number of visitors from bookmarked Pendo tab
+        -Update sales cheat sheet with Impact of switchover
+            code 3b_Pendo_metrics_cheat_sheet.md
+        -Launch Pendo Visitors page
+            Launch the **[Pendo Visitors Page](https://app.pendo.io/s/5109724588277760/visitors)**
+            Select Everyone and set Date drop down to April 1 to April 30
+        -Open PRD Pendo Metrics Sheet in APP_metrics_Update.xlsm
+             cd ../PyMetrics; dir
+             code open_sheet.py
+             cd ../App_metrics; dir
+             py ../PyMetrics/open_sheet.py "App_metrics_update.xlsm" "PRD Pendo Metrics"
+        
+            -Copy Time On Site, Number of Visitors and Frequency of Visitors into 
+
+    - Copy Pages and features clicks into Sheet "PRD PEndo Metrics"
+        -Create monthly_pendo_pages and features workbook
+            -Add section to Pendo Sales Cheat sheet
+                ## Has May seen a drop-off in pages visited?
+                code 3b_Pendo_metrics_cheat_sheet.md
+                
+            -Switch to Product-Pages, set month and download the selected pages Report
+                https://app.pendo.io/s/5109724588277760/pages
+
+                - Click download Pages Button and open the CSV file
+                    cd $env:userprofile\downloads; dir
+                    start excel 'page-list.csv'
+
+                - Insert pages into pendo_pages_features_2023.xlsx
+                    cd c:\projects\metrics\app_metrics\; dir
+                    start pendo_pages_features_2023.xlsx
+
+                - Open App_Metrics_update to PRD Pendo Metrics
+                    py ../PyMetrics/open_sheet.py "App_metrics_update.xlsm" "PRD Pendo Metrics"
+
+    - Switch to features, set month and download features report
+
+            -Switch to Product - Features, set month and download the features report CSV
+                https://app.pendo.io/s/5109724588277760/features
+                
+            -Add condition adjustment feature under valuation product area
+                -Navigate to Valuation Page Product Area
+                -Search for Condition Adjustment and Star it
+                -Swith to Valuation, VIN and Taxonomy to download latest trend file
+
+                - Download the CSV file and transfer results to pendo pages and features XLSX
+                    code csv_copy.py
+                    py csv_copy.py
+
+                - Open App_Metrics_update to PRD Pendo Metrics
+                    py ../PyMetrics/open_sheet.py "App_metrics_update.xlsm" "PRD Pendo Metrics"
+
+# Copy rows from pendo_pages_features_20233 to Pendo_Product_Pages and Pendo_Product_Features
+    - Copy rows and insert them at the top of each sheet
+
+# Run May number of visitors to run an index graph to see
+    - insert as image in the markdown file
+
+# Open the last April eCommerce report and update the 2022 Cider Summary sheet
+
+    - Figure out how to search Outlook to find Excel reports
+        cd c:\projects\metrics\PyMetrics; dir
+        code APP_update_outlook.txt                
+

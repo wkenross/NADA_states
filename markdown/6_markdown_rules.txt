@@ -1,0 +1,102 @@
+
+# Implement these business rules in a python script
+    - Here's an example script that identifies a string with "CGPS" in front, highlights the entire string, and converts it to markdown hyperlinks:
+        -- Copy original test file over to tasks folder
+                cd c:\projects\govt; dir
+                cp 1a_Georgia_markdown.txt c:\projects\tasks\1a_Georgia.txt
+        -- Verify that there is a clean test file to run through
+                cd c:\projects\tasks; dir
+                code 1a_Georgia.txt
+        
+        - Run python conversion scripts to produce a new 1a_Georgia.md file in the tasks folder
+            cd c:\projects\tasks; dir
+            code 1a_Georgia.txt
+            
+            py markdown_converter.py
+            py pattern_converter.py
+            py strip_converter.py
+            py link_converter.py
+            code 1a_Georgia.md
+        
+            - Code sources for scripts
+                    --Basic_markdown_conversion
+                    py markdown_converter.py
+                                code markdown_converter.py
+
+                    --Pattern_convert_of_bullets
+                        py pattern_converter.py
+                                code pattern_converter.py
+
+                --Strip_conversion
+                        py strip_converter.py
+                            code strip_converter.py
+
+            
+                    --Hyperlink_conversion
+                        py link_converter.py
+                            code link_converter.py
+
+    - Review the converter TXT file
+        cd c:\projects\tasks; dir        
+        code 1a_Georgia.txt
+        code 1a_Georgia.md
+
+# Final conversion after cleanup
+    - To convert Azure CLI scrapbook text files to markdown, you can follow these steps:
+        1. Open the Azure CLI scrapbook text file in a text editor such as Visual Studio Code.
+        2. Navigate to the menu bar and select "View" > "Command Palette" (or press Ctrl+Shift+P on Windows/Linux, or Cmd+Shift+P on macOS).
+        3. In the Command Palette, search for "Markdown: Open Preview" and select it.
+        4. The Markdown preview window will open next to the editor. You can see the formatted markdown version of the Azure CLI commands in the scrapbook file.
+        5. To save the markdown version of the scrapbook file, click on the "Export" button in the Markdown preview window. This will open a dialog box where you can specify the file name and location to save the markdown file.
+        6. Once you have specified the file name and location, click on the "Save" button. The markdown file will be saved to the specified location.
+
+# - Now convert 1a_Georgia_markdown to HTML
+        - Open the newly created markdown file
+            cd c:\projects\tasks; dir
+            code 1d_Georgia_markdown.md
+
+        
+        Ctrl + Shift + Palette
+        Markdown: All in One Print Documents to HTML   
+        cd out; dir
+        start 1d_Georgia_markdown.html 
+
+
+# Strings to replace
+    - you can replace dashes with hash symbols to create headings, and 
+    - replace spaces with underscores to create links. 
+    - You can also replace the "az" command with "az" to create a hyperlink to the Azure CLI documentation for that command.
+    - idea to find and replace cheap TPS strings in Azure text files with markdown appropriate hyperlinks without more context. However, if the cheap TPS strings are meant to be replaced with hyperlinks, then it may make sense to replace them with appropriate markdown hyperlinks instead. 
+    - If you are using Markus as a bullet point, replacing it with an asterisk using markdown is a common practice.
+    -  Similarly, using markdown to number short lines can make the text more structured and easier to follow.
+
+
+# Convert CLi Hyperlinks to markdown links
+    - If you have URLs in your Azure CLI scrapbook that you want to convert into hyperlinks in markdown, you can simply use markdown syntax to create a hyperlink.
+        To create a hyperlink in markdown, you can use the following syntax:
+        ```
+        [Link text](URL)
+        ```
+
+        Replace "Link text" with the text you want to use as the link, and "URL" with the actual URL you want to link to. For example, if you have a URL in your scrapbook like "https://urldefense.com/v3/__https://docs.microsoft.com/en-us/azure/virtual-machines/windows/__;!!PRlLeQRaTwtVOw!MZ0DXpljtL8xtle7O6-iZ0JqOcB8GwKzQ_xCcTGCxDOaIIFZrhhZ0izK8W1Vx7heB-uLcQSa9z8flfe_YLk-ZQ$ ", you can convert it to a hyperlink in markdown like this:
+
+        ```
+        [Virtual Machines - Windows](https://urldefense.com/v3/__https://docs.microsoft.com/en-us/azure/virtual-machines/windows/__;!!PRlLeQRaTwtVOw!MZ0DXpljtL8xtle7O6-iZ0JqOcB8GwKzQ_xCcTGCxDOaIIFZrhhZ0izK8W1Vx7heB-uLcQSa9z8flfe_YLk-ZQ$ ) ```
+
+        When you convert your scrapbook to markdown, this will create a hyperlink with the text "Virtual Machines - Windows" that links to the specified URL.
+
+# Final conversion after cleanup
+    - To convert Azure CLI scrapbook text files to markdown, you can follow these steps:
+
+        1. Open the Azure CLI scrapbook text file in a text editor such as Visual Studio Code.
+
+        2. Navigate to the menu bar and select "View" > "Command Palette" (or press Ctrl+Shift+P on Windows/Linux, or Cmd+Shift+P on macOS).
+
+        3. In the Command Palette, search for "Markdown: Open Preview" and select it.
+
+        4. The Markdown preview window will open next to the editor. You can see the formatted markdown version of the Azure CLI commands in the scrapbook file.
+
+        5. To save the markdown version of the scrapbook file, click on the "Export" button in the Markdown preview window. This will open a dialog box where you can specify the file name and location to save the markdown file.
+
+        6. Once you have specified the file name and location, click on the "Save" button. The markdown file will be saved to the specified location.
+

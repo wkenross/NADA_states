@@ -1,0 +1,49 @@
+# Here are the steps to make your folder a repository in your GitHub account:
+    - 0. Install Git on your computer.
+        https://git-scm.com/download/win
+        winget install --id Git.Git -e --source winget
+    - 0a. Configure global settings for Git.
+        https://www.jcchouinard.com/install-git-in-vscode/
+        
+        https://github.com/
+        git --version
+        git config --global user.name "wkenross"
+        git config --global user.email "kenrossiter@randallreilly.com"
+
+        git config --global core.editor "code --wait"
+        git config --global merge.tool vscode
+        git config --global mergetool.vscode.cmd "code --wait $MERGED"
+        git config --global diff.tool vscode
+        git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+        git config --global init.defaultBranch main
+        git config --global core.autocrlf true
+
+        curl -u "$(git config user.name)" https://api.github.com/user/repos -d '{"name":"NADA_states"}'
+        fulcrum2020!    
+
+        --Repository URL:
+            git remote get-url NADA_states
+            git remote -v
+
+-
+    - 1. Open VSCode and navigate to the folder that you want to turn into a repository.
+        cd c:\projects\govt; dir
+    - 2. Open the VSCode terminal by selecting Terminal > New Terminal from the menu bar.
+        ctrl + shift + `
+    - 3. Type `git init` in the terminal and press Enter. This will initialize a new Git repository in your folder.
+        git init
+    - 4. Type `git add .` in the terminal and press Enter. This will stage all files in your folder for commit.
+        git add .
+    - 5. Type `git commit -m "Initial commit"` in the terminal and press Enter. This will create an initial commit with all the staged files.
+        git commit -m "Initial commit"
+
+    - 6. Go to your GitHub account and create a new repository.
+
+    - 7. Copy the repository URL from the "Quick setup" section of the repository page.
+        https://github.com/wkenross/NADA_states.git
+
+    - 8. Type `git remote add origin <repository URL>` in the VSCode terminal and press Enter. This will add the remote repository as the origin.
+        git remote add orign https://github.com/wkenross/NADA_states.git
+
+    - 9. Type `git push -u origin master` in the VSCode terminal and press Enter. This will push your local repository to the remote repository on GitHub.
+        git push -u origin master

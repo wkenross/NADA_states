@@ -1,0 +1,100 @@
+# Maine
+    - Maine Revenue Services
+        - Revenue/taxes/property-tax/excise-tax
+            https://www.maine.gov/revenue/taxes/property-tax/excise-tax
+
+            Excise tax is an annual tax that must be paid prior to registering your vehicle. 
+            Except for a few statutory exemptions, all vehicles registered in the State of Maine are subject to the excise tax.
+
+        - Motor vehicle or camper trailer
+            Excise tax is defined by Maine law as a tax levied annually for the privilege of operating a motor vehicle or camper trailer on the public ways.
+
+        - Amount of tax determined by:
+            The age of the vehicle
+            Manufacturer's suggested retail price ("MSRP")
+
+        - Town that collects the tax can use it as revenue towards the annual town budget
+
+    - Towns get MSRP from several sources
+           --For_used_cars, individuals and municipalities can use 
+                the JD Power Official Used Car Guide (formerly the NADA Guide),
+                the New Car Cost Guide, 
+                the Automobile Red Book
+                Automobile Blue Book 
+           --to_determine the MSRP of a vehicle.
+
+    - Many towns have adopted software based on the --Automobile_Red_Book and can use the VIN number to determine the MSRP of that vehicle.
+
+    - The State of Maine Property Tax Division only provides quotes to the Municipal Tax Collector, not to individuals.
+
+    - Main municipal tax collector google search
+        https://www.google.com/search?q=maine+municipal+tax+collectors&ei=dLhcZPmhN8qfptQPyaGe4Aw&ved=0ahUKEwj5q9fs_Oz-AhXKj4kEHcmQB8wQ4dUDCBA&uact=5&oq=maine+municipal+tax+collectors&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQyCAgAEIoFEIYDMggIABCKBRCGAzoOCC4QigUQxwEQ0QMQkQI6CwguEIAEELEDEIMBOgsIABCABBCxAxCDAToRCC4QgAQQsQMQgwEQxwEQ0QM6CwgAEIoFELEDEIMBOhwILhCKBRDHARDRAxCRAhCXBRDcBBDeBBDgBBgBOggILhCKBRCRAjoHCAAQigUQQzoMCC4QigUQ5QQQChBDOgsILhCABBDHARDRAzoICAAQigUQkQI6BwguEIoFEEM6DQgAEIAEELEDEIMBEAo6BQguEIAEOgsIABCKBRCxAxCRAjoICC4QsQMQgAQ6FQguEIoFEEMQlwUQ3AQQ3gQQ4AQYAToLCC4QgwEQsQMQgAQ6CwguEIAEELEDENQCOggIABCABBCxAzoOCC4QgAQQsQMQxwEQrwE6GQguEIMBELEDEIAEEJcFENwEEN4EEOAEGAE6CwguEIAEEMcBEK8BOgoIABCABBCxAxAKOgYIABAWEB46CAgAEBYQHhAPOgcIABANEIAESgQIQRgAUABY4FZgk1hoAXABeACAAWyIAYkSkgEEMzAuMZgBAKABAcABAdoBBggBEAEYFA&sclient=gws-wiz-serp#ip=1
+
+        Maine has nearly 500 municipalities.
+        
+#  Massachussettes
+    - Department of Revenue Motor Vehicle Excise
+        https://www.mass.gov/guides/motor-vehicle-excise
+
+        When you register your motor vehicle or trailer, you have to pay a motor vehicle and trailer excise.
+
+        Your vehicle's value for excise purposes isn't the actual purchase price or "book value" of the vehicle. Instead, it's a percentage of the manufacturer's list price in the year of manufacture.
+        The manufacturer’s list price for any vehicle is the price the manufacturer recommends as the selling price of that vehicle (for vehicles of the same make, type, model, and year of manufacture) when new
+
+    - Motor Vehicle Excise PDF
+        https://www.sec.state.ma.us/cis/cispdf/Motor_Vehicle_Excise.pdf
+
+        The excise is levied by the city or town where the vehicle is principally garaged and the revenues become part of the local community treasury
+
+        Cities and towns prepare their own excise bills based on excise data sent by the Registry of Motor Vehicles in conformity with Massachusetts state law. 
+        The city or town assessors then commit them to the local tax collectors for distribution and collection of payment
+
+        Information on the value of a motor vehicle is accessed electronically through a data bank complete with valuation figures. 
+        Different sources provide the valuation figures depending upon whether the motor vehicle is an automobile, a truck, a motorcycle, or a trailer. 
+        For example, automobile valuations are derived from figures published in the National Automobile Dealers Association Official Used Car Guide (NADA), to which the Registry 
+        has electronic access. Most public libraries have copies of NADA and other motor vehicle official guides.
+
+    - Registry of Motor Vehicles
+        Executive Office of Transportation
+        25 Newport Avenue
+        Quincy, MA
+
+        Mailing Address: P.O. Box 55889
+        Quincy, MA 02205-5889
+        Tel: 857-368-8000 
+        Toll Free: 1-800-858-3926 
+        Ombudsman Office: 857-368-9455
+        Registrar’s Office 857-368-4636
+        https://www.mass.gov/rmv
+
+
+    - Secretary of the Commonwealth of Massachussets
+        -CIS: Motor Vehicle Excise Informaation
+            - Information of the value of a motor vehicle is accessed electronically through a data bank complete with valuation figures. Different sources provide the ...
+
+        - Car and Driver: MAS auto saless tax: Everything you need to know
+            --The excise tax is $25 for every $1,000 of the vehicle's value and is required to be paid in full for each calendar year. The car's value is based on the . 
+
+        - Create Excel MA book and point web query at tables in here
+            https://www.sec.state.ma.us/cis/cispdf/Motor_Vehicle_Excise.pdf
+
+        Secretary of the Commonwealth of MA
+            William Francis Gavin
+    https://www.sec.state.ma.us/
+
+    - NADA users
+        An excise at the rate of $25 per one thousand dollars of valuation (effective 1/1/81) is levied on each motor vehicle. 
+        Information on the value of a motor vehicle is accessed electronically through a data bank complete with valuation figures.
+         Different sources provide the valuation figures depending upon whether the motor vehicle is an automobile, a truck, a motorcycle, or a trailer. For example, automobile 
+        valuations are derived from figures published in the National Automobile Dealers Association Official Used Car Guide (NADA), to which the Registry has electronic access. Most public libraries have copies of NADA and other motor vehicle official guides.
+
+    - Change to states folder and create MASS web query
+
+        Create web to Excel query in MA files
+        cd c:\projects\govt\states\MA; dir
+        start 
+       https://www.ncdor.gov/assessors-list-3-15-23pdf/open
+
+       
+            
+

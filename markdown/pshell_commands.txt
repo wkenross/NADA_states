@@ -1,0 +1,20 @@
+Get-ChildItem Env: | Sort Name; dir
+cd $env:USERPROFILE; dir
+cd "OneDrive - Informa plc"; dir
+cd Desktop; dir
+cd $env:USERPROFILE
+
+$Env:OneDrive = "C:\Users\RossiterK\OneDrive - Randall Reilly"
+
+cd $env:OneDrive\desktop\RI\Product_Metrics; dir
+RI\Product_Metrics; dir
+
+C:\Users\RossiterK\OneDrive - Informa plc\Desktop\RI; dir
+cd %USERPROFILE%\Dwsktop; dir
+
+move-item C:\projects\bulk_spec\2_Add_Bulk_spec_backlog_competitive.txt c:\projects\backlog\3_Clean_up_VOC_backlog.txt
+cd c:\projects\backlog; dir 
+code c:\projects\backlog\3_Clean_up_VOC_backlog.txt
+
+- Command Pallete: Extension for creating text tables
+https://marketplace.visualstudio.com/items?itemName=RomanPeshkov.vscode-text-tables

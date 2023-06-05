@@ -1,0 +1,39 @@
+﻿var govMain = {};
+$(document).ready(function () {
+    
+    if ($('#gov_main_halfStaff').length > 0)
+        govMain.flagUpdate();
+});
+
+govMain.flagUpdate = function() {
+    var dtNow = new Date();
+    var displayHalf = false;
+    var start, end
+    var thisActive = $('#gov_main_halfStaff').data("checkit").toString() === "true";
+
+    if (thisActive) {
+        var startDate = $('#gov_main_halfStaff').data("startdate");
+        var endDate = $('#gov_main_halfStaff').data("enddate");
+        var startTime = $('#gov_main_halfStaff').data("starttime");
+        var endTime = $('#gov_main_halfStaff').data("endtime");
+        
+        if (startDate.length > 0 && endDate.length > 0 && startTime.length > 0 && endTime.length > 0) {
+            start = new Date((startDate + ' ' + startTime).split("-").join("/"));
+            end = new Date((endDate + ' ' + endTime).split("-").join("/"));
+            if (govMain.isValidDate(start) && govMain.isValidDate(end)) {
+                if (start < dtNow && end > dtNow) {
+                    displayHalf = true;
+                }
+            }
+        }
+    }
+    if (displayHalf) {
+        if ($('#gov_main_halfStaffText').length > 0)
+            $('#gov_main_halfStaffText').show();
+        $('#gov_main_halfStaff').attr("src", "/uploadedImages/govnewnvgov/Content/Home/features_20191216/flag_half.png");
+    }
+};
+
+govMain.isValidDate = function (dt) {
+    return dt && Object.prototype.toString.call(dt) === "[object Date]" && !isNaN(dt);
+};

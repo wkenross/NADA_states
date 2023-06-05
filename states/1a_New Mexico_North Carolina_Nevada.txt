@@ -1,0 +1,109 @@
+# New Mexico Excise Taxes
+    - Tax New Mexico
+        https://www.tax.newmexico.gov/all-nm-taxes/2020/10/22/motor-vehicle-excise-tax/
+
+            - Motor Vehicle Excise Tax
+                The Motor Vehicle Excise Tax applies to the sale of every motor vehicle that must be registered in the State of New Mexico. 
+                The tax is 4% of the price paid for the vehicle less any trade-in credit. For non-dealer sales,
+            
+            - NADA values used
+                the N.A.D.A. value is used if the declared purchase price of the vehicle is lower than 80% of the N.A.D.A. average trade-in or wholesale value.
+                
+
+            - New Mexico Motor Vehicle Division
+                you must pay the tax to the New Mexico Motor Vehicle Division (MVD) 
+
+    - Motor Vehicle Services
+        https://eservices.mvd.newmexico.gov/eTapestry/_/
+
+-
+# Confirm North Carolina is first winner
+   - North Carolina Department of Revenue
+        https://www.ncdor.gov/taxes-forms/property-tax/property-tax-division
+   
+        The property tax in North Carolina is a locally assessed tax, collected by the counties. 
+
+        The Department of Revenue is charged with the duty to exercise general and specific supervision over the valuation and taxation of property by taxing units throughout the State. 
+        The Property Tax Division of the North Carolina Department of Revenue is the division responsible for this administration.
+
+    - Motor vehicle tax collection to North Carolina Division of Motor Vehicles (NCDMV)
+        https://www.ncdor.gov/taxes-forms/property-tax/types-property-be-taxed
+
+        Combined motor vehicle registration renewal and property tax collection system (Tag & Tax System). 
+        By doing so the new law transfers the responsibility for motor vehicle tax collection from the individual counties across North Carolina to the North Carolina Division of Motor Vehicles (NCDMV).
+
+        https://www.ncdot.gov/dmv/Pages/default.aspx
+
+
+    - Questions regarding vehicle values and appeals directed to tax assessor
+        https://www.ncdot.gov/dmv/title-registration/registration/Pages/default.aspx
+
+            Questions regarding vehicle values and appeals on tax values must be directed to the tax assessor in the county where the vehicle is registered, not NCDMV.    
+        -North Carolina Tax Offices
+            "https://www.ncdot.gov/dmv/title-registration/taxes/Pages/nc-county-tax-offices.aspx"
+            
+            ##-Write_Excel
+                cd ..\vba; dir
+                    
+                    py xlwings_text.py copy_text_excel "NADA_states_marketing_list.xlsx" "North Carolina" "M15" "https://www.ncdot.gov/dmv/title-registration/taxes/Pages/nc-county-tax-offices.aspx"
+                    
+                    py xlwings_text.py copy_text_excel "NADA_states_marketing_list.xlsx" "North Carolina" "M15" "https://www.ncdot.gov/dmv/title-registration/taxes/Pages/nc-county-tax-offices.aspx"
+                    --pass args down the rows  
+                cd c:\projects\vba; dir
+                --Open workbook to a specific sheet
+                    py xlwings_text.py open_sheet "NADA_states_marketing_list.xlsx" "North Carolina"
+                
+            ## Create_macro to set up Excel web query
+                https://oxylabs.io/blog/web-scraping-excel-vba
+        
+                -Disable macro settings in Excel
+                    start excel.exe
+                    --File > Options > Trust Center Settings > Macro Settings > Eanable all macros
+                -Macro_Python function with arguments
+                    cd c:\projects\vba\
+                    start accounts_macros.xlsm
+                    py xlwings_text.py run_excel_macro "accounts_macros.xlsm" "Xl_web_query"
+
+        - Beaufort County indicative of tools used to value vehicles
+            https://co.beaufort.nc.us/398/Registered-Motor-Vehicles
+
+            Registered Motor Vehicles are valued at their true value in money.  Our office uses pricing guides such as NADA, Old Cars Price Guide, and TEC Data Systems 
+            valuation manuals to value vehicles as of January 1 in the year the registration is taxed for.  
+        
+            # xlwings script to copy Beaufort into Excel
+                cd c:\projects\vba; dir
+                py xlwings_text.py copy_text_excel 'NADA_states_marketing_list.xlsx', "North Carolina", "M11", ""hyperlink("https://co.beaufort.nc.us/398/Registered-Motor-Vehicles","Beaufort County Valuation Guides")"""
+
+        - Review of county web sites has quotes like this:
+            The Assessor’s responsibility includes listing, appraising and assessing all taxable property within Buncombe County. 
+            The Collector is responsible for the collection of all property taxes in Buncombe County.
+
+            https://www.buncombecounty.org/governing/depts/tax/assessment.aspx   
+
+        - Create web to Excel query in North Carolina files
+            cd c:\projects\govt\states\North_Carolina\; dir
+            start NC_detail.xlsx
+        https://www.ncdor.gov/assessors-list-3-15-23pdf/open
+-
+
+# Nevada
+    - Zero in on State of Nevada
+        -Nevada has highest car tax rate in the country at 8.25%
+            -Gov't 50 indicates State sales and Use Case
+            -State property / Excise taxes on the Vehicles
+        
+        -Find link to PDF showing the 12 county assessors
+            - Links to county assessors and treasurers
+                https://tax.nv.gov/LocalGovt/County_Property_Tax/General_Property_Tax_Information_and_Links_to_County_Assessors_and_Treasurers/
+                    
+        -Can assume these are the folks who should get our email
+        -Shred PDF, transpose and put into row based mailer formaat
+    
+        -assesors seem to be focused just on property but do have link to department of transportation leadership
+            https://tax.nv.gov/Contact/Department_of_Taxation_Leadership/
+            
+            code "C:\projects\Govt\States\Nevada\Department of Taxation Leadership.html"
+-
+
+
+

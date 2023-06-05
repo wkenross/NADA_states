@@ -1,0 +1,85 @@
+# Open NADA state marketing list and create Minnesota sheet
+    - Local govt projects folder and spreadsheets    
+        -local
+            cd c:\projects\govt\; dir
+            start "Government 50 Marketing List_2023_03_10.xlsx"
+
+        --Open NADA marketing list 
+                cd c:\projects\govt\; dir;
+                start NADA_states_marketing_list.xlsx
+
+    - Copy Target 28 sheet and save as state
+        -Delete extra rows
+
+# List of DMVs from other states
+    https://dmv.vermont.gov/about-vermont-dmv/external-links/DMVs
+    
+# Idaho State Tax Commission
+    - Can you describe how vehicle use tax is determined by Idaho State Tax Commission?
+        In Idaho, vehicle use tax is determined based on the purchase price or current value of the vehicle, whichever is greater. 
+        The tax rate varies depending on the type of vehicle and whether or not the purchaser is a resident of Idaho. 
+            For passenger vehicles, the tax rate is 6% of the purchase price or current value. For commercial vehicles, the tax rate is 8% for non-residents or 6% for residents, with a maximum tax of $62.50 for vehicles with a declared weight of less than 8,000 pounds. 
+            It's worth noting that Idaho also has a maximum tax limit that applies to all vehicles, which is currently set at $53, however, the maximum tax limit is not applicable for vehicles in the commercial category. 
+            Additionally, there may be local option taxes which can vary depending on where the vehicle is registered. The Idaho State Tax Commission website has a helpful resource for calculating and paying vehicle use tax.
+    - How does Iadaho State Tax Commmission determine current value of a vehicle
+        The Idaho State Tax Commission uses a standard pricing guide to determine the current value of a vehicle for tax purposes. 
+        The most popular pricing guides used by the commission are the National Automobile Dealers Association (NADA) guide, the Kelley Blue Book (KBB), 
+        and the Used Car Guide published by the National Auto Research (NAR).
+
+        The Idaho State Tax Commission compares the purchase price with the current value of the vehicle on the date of purchase to establish its taxable value. 
+        If the purchase price is less than the current value of the vehicle, the taxable value is the current value at the time of purchase.
+    - Which office at the Idaho State Tax Commission is responsible for determining the value of a vehicle?
+        The Idaho State Tax Commission's Motor Vehicle Services Division is responsible for determining the value of a vehicle for tax purposes. This division oversees the titling, registration, and taxing of vehicles in Idaho and works closely with dealerships, insurance companies, and individuals to ensure proper valuation and taxation of vehicles. 
+
+        The Motor Vehicle Services Division is responsible for setting the vehicle's taxable value using a standard pricing guide, as mentioned earlier, based on the vehicle's make, model, and year. 
+    - Can you create a google query that will likely find the contact information for directors and officers of Idaho State Tax Commission's Motor Vehicles Service Division?
+        --Can you create an Excel hyperlink function that performs that google query?    
+        `=HYPERLINK("https://www.google.com/search?q=Idaho+Tax+Commission+Motor+Vehicles+Division+directors+and+officers+list","Search")`
+        https://tax.idaho.gov/contact-us/administrative-contacts/
+
+    - can you create vba script that creates an Excel web data query to this hyperlink https://tax.idaho.gov/contact-us/administrative-contacts/
+        code C:\projects\Govt\vba_govt_macros.cls
+    - can you write python script that imports xlwings and opens workbook C:\projects\Govt\NADA_states_marketing_list.xlsx, inserts a new sheet and names it Idaho and inserts a VBA module?
+        cd c:\projects\govt; dir
+        py insert_state_sheet.py
+        start NADA_states_marketing_list.xlsx
+
+
+    
+
+# Iowa  
+    - Iowa Department of Revenue
+        https://tax.iowa.gov/
+    
+    - Iowa Motor Vehicle Division
+        https://iowadot.gov/mvd
+
+    - Fees
+        Y, one time 5% fee at time of sale
+
+
+    - County treasurer's office
+        Vehicle registrations, license plates, and titling services are processed at a county treasurer’s office. 
+        Please contact the county treasurer in the county appropriate for your transaction, 
+
+        --Iowa County Treasurers
+        https://www.iowatreasurers.org/treasurermapsearch.php
+
+
+        --Contac county treasurers
+        
+        --Buchanan county example
+        https://www.iowataxandtags.org/about-us/buchanan-county-treasurer/#officeinfo
+
+    
+    - Selling a vehicle in Iowa
+        https://iowadot.gov/mvd/buyingselling/selling-your-vehicle
+
+   - Fair Markt Value: NADA
+        "Fair market value" refers to the average retail value found in the "National Automobile Dealers Association (NADA) Official Used Car Guide." 
+        NADA guides may be available through a library, insurance agent, auto dealer or at the NADA's website.
+
+        https://www.iowataxandtags.org/vehicle-registration/selling-your-vehicle/
+
+
+

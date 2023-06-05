@@ -1,0 +1,97 @@
+# Open NADA state marketing list and create Minnesota sheet
+    - Local govt projects folder and spreadsheets    
+        -local
+            cd c:\projects\govt\; dir
+            start "Government 50 Marketing List_2023_03_10.xlsx"
+
+        --Open NADA marketing list 
+                cd c:\projects\govt\; dir;
+                start NADA_states_marketing_list.xlsx
+
+    - Copy Target 28 sheet and save as state
+        -Delete extra rows
+
+# Create Kentucky Sheet
+    - Kentucky Motor Vehicle Usage Tax
+        tax on the privilege of using a motor vehicle upon the public highways of Kentucky and shall be separate and distinct from all other taxes imposed by the Commonwealth. 
+         It is levied at six percent and shall be paid on every motor vehicle used in Kentucky.
+
+    - Kentucky Department of Revenue
+        The Kentucky Department of Revenue pays NADA (National Automobile Dealers Association) to provide it with an annual list of assessments for each vehicle registered in the commonwealth. 
+        https://web.asdeporte.com/m3t077rc/kentucky-annual-vehicle-tax-calculator
+
+    - Motor Vehicle Usage Tax
+        (502) 564-4455
+        Kentucky Department of Revenue
+        Motor Vehicle Usage Tax Section
+        Station 64
+        PO Box 1303
+        Frankfort, ​KY 40602-1303
+        
+    - Assessment of Motor Vehicles
+        cd C:\projects\Govt\States\KY\; dir
+        start adobe "Assessment Process of Motor Vehicles.pdf"
+
+        --Property Valuation Administrator
+            January 1 is the assessment date for motor vehicles and the Property Valuation Administrator is the assessor; 
+            the County Clerk collects the property tax due on motor vehicles at the time of registration, and is paid a four percent commission to cover the cost of collection.
+
+            Valuation is based on the market, by reference to a table of values derived from the NADA tape calibrated locally through the application of market adjustment factors.
+
+           The assessments of automobiles, pick-ups, small trucks, and vans that are nineteen (19) years old or less are derived from the NADA Official Used Car Guide. 
+           All motor vehicles assessed by this guide shall be assessed at the clean trade-in value, less any applicable deductions, unless information is available that warrants any deviation from the standard value 
+
+    - Kentucky PVA Association
+        http://www.kypva.org/contact-us/
+
+        Mack Bushart, Executive Director
+        KY PVA Association
+        514 Colby Road
+        Winchester KY 40391
+        859-595-0911
+        Email: mack@kypva.org
+
+    - Kentucky VAluation Administrator Directory
+        https://revenue.ky.gov/PVANetwork/PublishingImages/Pages/default/new%20directory%20%282018-2022%29%20for%20web.pdf
+
+# Michigan
+    - Michigan Treasury Now Comparing Reported Vehicle Values to NADA Values to Determine Use Tax Due
+        https://www.yeoandyeo.com/resource/buying-a-used-car-michigan-treasury-now-comparing-reported-vehicle-values-to-nada-values-to-determin
+
+    - Casual selloer pays Michigan Use Tax rather than sales tax
+        Under Michigan Sales/Use Tax Statutes, a casual seller, i.e., not a licensed new or used vehicle dealer, is not responsible for collecting and remitting sales tax
+         on the sale of a used motor vehicle. Instead, the buyer is subject to Michigan use tax when registering the title with the Michigan Secretary of State office. 
+
+    - Now cross referenced with NADA
+        The Michigan Department of Treasury has established a system to cross-reference amounts reported to the Michigan Secretary of State as the sales price
+         for a used vehicle transfer to the National Automotive Dealers Association (NADA) database for the retail value of used vehicles. Under Michigan law, the use tax payable on a used vehicle transfer is 6% on the greater of the purchase price or the retail value of the vehicle at the time of transfer.
+
+
+# Target adds at Minnesoata
+    - Minnesota tagged as Y Excise tax
+    - Should target adds at Minnesota of Revenue
+
+    https://www.revenue.state.mn.us/guide/miscellaneous-motor-vehicle-taxes
+
+    Note: The deputy registrar has the authority to determine a vehicle's value by using nationally recognized sources of information on vehicle resale values.
+
+    Ponh Xiong is director, DRiver and VEhicle Services at Minnesota
+    Department of Public Safety
+    https://www.linkedin.com/in/pongxiong#:~:text=Pong%20Xiong%20%2D%20Director%20of%20Driver,of%20Public%20Safety%20%2D%20DPS%20%7C%20LinkedIn
+
+
+    # Create flyer contacts from Deputy Registrars at various counties
+    - Minnesots uses a state-regulated system of 90 public and 78 private deputy registrars
+
+        https://www.auditor.leg.state.mn.us/ped/1994/depregis.htm
+    -Becker county
+        - https://www.co.becker.mn.us/dept/motor_vehicle/
+            Stacey Cresswell - supervisor
+            motorvehicle@co.becker.mn.us
+            -915 Lake Ave
+            Detroit Lakes, MN 56501
+
+    - Create web query to download all registrar offices from here:
+        https://dmvconnect.com/mn-minnesota/
+     
+    

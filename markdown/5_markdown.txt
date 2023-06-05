@@ -1,0 +1,55 @@
+# Markdown syntax and settings
+    - Create a markdown cheat sheet file that can be converted to HTML and pasted in Outlook email or viewed in a browser
+        code 3a_Pendo_sales_cheat_sheet.md
+    - Mardown syntax highlights
+        - Headings
+            # Main Heading
+            ## Subheading 1
+            ### Subheading 2
+        - Hyperlinks
+            you can create hyperlinks by enclosing the text you want to turn into a link in square brackets `[ ]`, followed by the URL in parentheses `( )`
+            -**Bold**: To make the link text bold, enclose it in double asterisks `** **`, like this:
+                --**[hyperlink](https://www.example.com)**
+            -Italic_: To make the link text italic, enclose it in single underscores `_ _`, like this:
+               --_[hyperlink](https://www.example.com)_
+            -Emphasis: Use a combination of bold and italic with asterisks and underscores for emphasis. For example:
+               --***[hyperlink](https://www.example.com)***
+        - Bullets
+            To create a bullet point in Markdown, simply begin the line with an asterisk (`*`) or a hyphen (`-`), followed by a space and the text of the bullet point.
+            * Item 1
+            - Item 2
+            1. FIrst Item
+            2. Second Item 
+
+        - Here's an example of how to insert an image into a Markdown file:
+            ```
+            ![alt text](image.jpg "Title"){width=50%}
+            ```
+                - In this example, `alt text` is the alternative text to display if the image cannot be loaded or seen. `image.jpg` is the file path to the image file, and `"Title"` is the optional title text for the image.
+                - When you convert this Markdown file to HTML using the "Markdown All in One: Print Documents to HTML" extension, the image will appear in the HTML page.
+
+
+## API Metrics Update Workbook
+- Set metric analysis month
+MONTH=2023-02
+# Download Accounts Report and copy filtered rows to API_Metrics Update
+- Open API_Metrics_Update and copy MM-YYYY PRD API Account Sheet as 02-2023 PRD API Account
+    cd $env:OneDrive\Desktop\RI\Product_Metrics\API_Metrics; dir
+    start $env:OneDrive\Desktop\RI\Product_Metrics\API_Metrics\API_metrics_update.xlsm
+- Pass metric analysis month into API Dashboard
+    https://logs-app.production.pricedigestsapi.com/dashboard/primary/2023-02
+- Filter out Informa / PRD-EQW Sales Demo / CAB and save CSV to logs folder
+    cd API_Account_Logs; dir
+- Copy rows to 02-2023 PRD API Account / Freeze panes / Add Data Filter
+# Update TBIQ Charts Sheet
+- Create new window and select TBIQ Charts
+Filter EndPoint to TOTAL: Copy totals, success, errors and Error 15 and Error 99
+Filter EndPoint to TRUCK_BODIES: Copy Totals and Errors
+
+Verify recording environnment and technology 
+    - RUn Price Digests app on Primary laptop screen
+        Verify can access Truck Blue book hyperlink and the application runs as planned
+        https://edge://favorites/
+
+        # Side infrastructure project
+        -Figure out how to launch the Edge secure browser rather than HTTPS

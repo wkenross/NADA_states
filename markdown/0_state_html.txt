@@ -1,0 +1,63 @@
+# Convert George State TXT file to markdown
+    cd c:\projects\govt; dir
+    cp 1a_Georgia_Louisianna_Tenn.txt 1a_Georgia_markdown.txt
+    code 1a_Georgia.txt
+
+# Convert TXT to Markdown
+    To convert Azure CLI scrapbook text files to markdown, you can follow these steps:
+        1. Open the Azure CLI scrapbook text file in a text editor such as Visual Studio Code.
+        2. Navigate to the menu bar and select "View" > "Command Palette" (or press Ctrl+Shift+P on Windows/Linux, or Cmd+Shift+P on macOS).
+        3. In the Command Palette, search for "Markdown: Open Preview" and select it.
+        4. The Markdown preview window will open next to the editor. You can see the formatted markdown version of the Azure CLI commands in the scrapbook file.
+        5. To save the markdown version of the scrapbook file, click on the "Export" button in the Markdown preview window. This will open a dialog box where you can specify the file name and location to save the markdown file.
+        6. Once you have specified the file name and location, click on the "Save" button. The markdown file will be saved to the specified location.
+
+https://github.com/tstringer/azure-cli-scrapbook-to-markdown
+
+Azure CLI Scrapbook to Markdown Converter
+
+# Steps to convert to HTML
+    - Open the file in VS Code
+    - Install the Markdown All in One extension
+    - Press Ctrl+Shift+P to open the Command Palette
+    - Type "Markdown" and select "Markdown: Print current document to HTML"
+    - The HTML file will open in a new tab in the editor
+    - Press Ctrl+S to save the HTML file
+    - Press Ctrl+Shift+P to open the Command Palette
+    - Type "Markdown" and select "Markdown: Open preview to the side"
+    - The HTML file will open in a preview tab on the side of the editor
+    - Press Ctrl+Shift+P to open the Command Palette
+    - Type "Markdown" and select "Markdown: Copy current document to clipboard as HTML"
+    - The HTML file will be copied to the clipboard
+    - Paste the HTML into an email or other application
+
+
+# Markdown syntax and settings
+    - Create a markdown cheat sheet file that can be converted to HTML and pasted in Outlook email or viewed in a browser
+        code 3a_Pendo_sales_cheat_sheet.md
+    - Mardown syntax highlights
+        - Headings
+            # Main Heading
+            ## Subheading 1
+            ### Subheading 2
+        - Hyperlinks
+            you can create hyperlinks by enclosing the text you want to turn into a link in square brackets `[ ]`, followed by the URL in parentheses `( )`
+            -**Bold**: To make the link text bold, enclose it in double asterisks `** **`, like this:
+                --**[hyperlink](https://www.example.com)**
+            -Italic_: To make the link text italic, enclose it in single underscores `_ _`, like this:
+               --_[hyperlink](https://www.example.com)_
+            -Emphasis: Use a combination of bold and italic with asterisks and underscores for emphasis. For example:
+               --***[hyperlink](https://www.example.com)***
+        - Bullets
+            To create a bullet point in Markdown, simply begin the line with an asterisk (`*`) or a hyphen (`-`), followed by a space and the text of the bullet point.
+            * Item 1
+            - Item 2
+            1. FIrst Item
+            2. Second Item 
+
+        - Here's an example of how to insert an image into a Markdown file:
+            ```
+            ![alt text](image.jpg "Title"){width=50%}
+            ```
+                - In this example, `alt text` is the alternative text to display if the image cannot be loaded or seen. `image.jpg` is the file path to the image file, and `"Title"` is the optional title text for the image.
+                - When you convert this Markdown file to HTML using the "Markdown All in One: Print Documents to HTML" extension, the image will appear in the HTML page.

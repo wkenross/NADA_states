@@ -1,0 +1,13 @@
+curl 
+-X GET "https://pricedigestsapi.com/v1/values/value?configurationId=1598830&usage=95432" \  -H "x-api-key:  67556479c42843fcf5e2990f3851f1"
+
+
+# -X GET "https://pricedigestsapi.com/v1/verification/vin/3GCUYGED9LG312459" \  -H "x-api-key:  67556479c42843fcf5e2990f3851f1" 
+
+#- x-api-key: 67556479c42843fcf5e2990f3851f1
+https://docs.pricedigestsapi.com/#auth 
+
+# - VIN: 1N6AD0EV3FN716185
+https://docs.pricedigestsapi.com/#get-/verification/vin/-vin-
+
+# -X GET "https://pricedigestsapi.com/v1/v1/values/value?configurationId=1598830&usage=95432" \  -H "x-api-key:  67556479c42843fcf5e2990f3851f1" 

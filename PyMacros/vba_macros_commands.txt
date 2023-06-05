@@ -1,0 +1,98 @@
+# Add Excel transposer macro
+    - Open macro workook to add new macro
+        cd c:\projects\PyMacros; dir
+        start vba_macros.xlsm
+
+    - New open macro modules and workbook script using pywind32
+        py -m pip install pywin32
+        code open_macros.py
+        py open_macros.py TransposeData C:\projects\PyMacros\vba_macros.xlsm
+
+    - Add new macro to VBA module: Transpose data
+        py macro_run.py TransposeData C:\projects\PyMacros\vba_macros.xlsm
+
+# Clean up a macro workbook and publish it
+    - Python script to remove modules in macro-enabled workbook and data links
+        cd c:\projects\PyMacros; dir
+
+        --script uses openpyxl to remove modules and data links
+            py -m pip install openpyxl
+            code xlsm_publish.py
+
+        --pass in workbook name to be cleaned up
+            cd c:\projects\PyMacros; dir
+            py xlsm_publish.py "vba_macros.xlsm"
+ 
+
+# Run VBA Macro Functions
+        
+    - Run_Macros.py functions
+        cd c:\projects\PyMacros; dir
+        py run_macros.py run_excel_macro("hello_world", r"C:\projects\PyMacros\vba_macros.xlsm")
+
+        py run_macros.py run_excel_macro "hello_world", r"C:\projects\PyMacros\vba_macros.xlsm"
+
+    - Macro_run.py script 
+        cd c:\projects\PyMacros; dir
+        code macro_run.py
+
+        py macro_run.py hello_world C:\projects\PyMacros\vba_macros.xlsm
+
+
+# Clean up Excel
+    - Kill hung Excel from running macros
+        --Check_tasklist and kill hung Excel process if needed
+            Ctrl + ~ --Shift_focus_terminal
+            tasklist
+            Get-Process excel
+            Stop-process -Id 36476 -Force
+
+        - Keystrokes
+            Shift + tab --shift_indent
+            tab --shift
+            ctrl + / --comment_uncomment_lines
+        
+    - Remove XLSM macro modules to publish as xlsx
+        --Run_python passing in the XLSM workbook name
+                    py convert_xlsm.py "App_metrics_update.xlsm"
+                    cd C:\projects\Metrics\app_metrics; dir
+
+            cd C:\projects\Metrics\app_metrics; dir
+            start _App_metrics_update.xlxm
+            --Add VBA macro sheet to the file
+                code add_macro_xlsm.py
+                py add_macro_xlsm.py "App_metrics_update.xlsm"
+
+            --xlwings_pro is needed for some of the functionality like deleting macro sheets
+                py -m pip install "xlwings"
+                PY -m pip show "xlwings"
+                cd C:\Users\kenrossiter\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages
+
+                py -m pip install xlwings license update -k eyJwcm9kdWN0cyI6IFsicHJvIiwgInJlcG9ydHMiXSwgInZhbGlkX3VudGlsIjogIjIwMjMtMDYtMjIiLCAibGljZW5zZV90eXBlIjogInRyaWFsIn0=45ce9
+               
+                py -m pip install xlwings[pro] --extra-index-url=https://pypi.xlwings.org --trusted-host pypi.xlwings.org --upgrade --force --no-cache-dir --no-binary=:all: --user --force-reinstall --install-option="--install-data=$HOME" --install-option="--license-key='eyJwcm9kdWN0cyI6IFsicHJvIiwgInJlcG9ydHMiXSwgInZhbGlkX3VudGlsIjogIjIwMjMtMDYtMjIiLCAibGljZW5zZV90eXBlIjogInRyaWFsIn0=45ce9'"
+                py -m pip install xlwings[pro] --global-option="--xlwings-license='eyJwcm9kdWN0cyI6IFsicHJvIiwgInJlcG9ydHMiXSwgInZhbGlkX3VudGlsIjogIjIwMjMtMDYtMjIiLCAibGljZW5zZV90eXBlIjogInRyaWFsIn0=45ce9'"
+                
+                
+                py -m pip install --upgrade pip
+                py -m pip install xlwings[pro] --extra-index-url=https://pypi.xlwings.org --trusted-host pypi.xlwings.org --upgrade --force --no-cache-dir --no-binary=:all: --user --force-reinstall --install-option="--install-data=$HOME" --install-option="--license-key='eyJwcm9kdWN0cyI6IFsicHJvIiwgInJlcG9ydHMiXSwgInZhbGlkX3VudGlsIjogIjIwMjMtMDYtMjIiLCAibGljZW5zZV90eXBlIjogInRyaWFsIn0=45ce9'"
+                py -m pip install xlwings[pro] --global-option="--xlwings-license='eyJwcm9kdWN0cyI6IFsicHJvIiwgInJlcG9ydHMiXSwgInZhbGlkX3VudGlsIjogIjIwMjMtMDYtMjIiLCAibGljZW5zZV90eXBlIjogInRyaWFsIn0=45ce9'"
+            --Convert xlsm to xlsx 
+                code convert_xlsm.py
+               
+        - Upload macro free App_Metrics_Update.xlsm to sharepoint site
+            --Sharepoint -Asset_Inteligence -Product -App_Metrics
+                https://randallreilly.sharepoint.com/:f:/s/AssetIntelligence-Product/EsDjbMAJ6BtGvIhpQ-s3mI4Bga4lYMokdw1dn9Almav8UA?e=Ooqdpr
+
+            https://randallreilly.sharepoint.com/:x:/s/AssetIntelligence-Product/EeMjXEAcX0NOnar7b6QS3UsBdzPKVrUyRdz_S_9qmdMfUw?e=DzHaXj
+
+        - Save APP_Metrics_Report as markdown file to use in instructions
+            cd $env:OneDrive\Desktop\RI\Product_Metrics\App_Metrics; dir
+            cp $env:OneDrive\Desktop\RI\Product_Metrics\App_Metrics\App_Metrics_Report.docx c:\projects\metrics\App_Metrics\
+            cd c:\projects\metrics\App_Metrics; dir
+            code App_Metrics_Report.docx
+
+            --Use Python docx2md library
+                https://www.google.com/search?q=%22installing+docx2md+python+package%22+OR+%22docx2md+python+package+installation+guide%22
+                py -m pip install python-docx2md
+-

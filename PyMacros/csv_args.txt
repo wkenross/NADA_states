@@ -1,0 +1,15 @@
+---
+-csv_file, C:\Projects\govt\NADA_states_marketing_list.xlsx
+-file_path, C:\Projects\govt\NADA_states_marketing_list.xlsx
+-sheet_name, Sheet1
+-Entity, Georgia Department of Revenue - Motor Vehicle Division
+-Website, https://dor.georgia.gov/motor-vehicles
+-Address, 4125 Welcome All Road
+-City, Atlanta
+-State, GA
+-Zip, 30349
+-Key_Contact, Robert Worley
+-Title, Director - Motor Vehicle Division
+-Phone, (404) 417-2122
+-Email, robert.worley@dor.ga.gov
+---

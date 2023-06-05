@@ -1,0 +1,118 @@
+# Texas is another at the county level and has a general listing
+    - Standard presumptive values site with calculate your vehicle's value
+        https://www.txdmv.gov/standard-presumptive-calculator
+
+        Texans who buy a used vehicle from anyone other than a licensed vehicle dealer are required to pay motor vehicle sales tax of 6.25 percent on the purchase price or
+        standard presumptive value (SPV), whichever is the highest value.
+    
+        - Black book used in calculator
+            Black Book, the national guide that provides the values, uses an average wholesale used vehicle value based on Texas sales data. 
+            You can preview the full SPV of a used vehicle by entering the vehicle identification number (VIN) and odometer reading (not needed for motorcycles) in the boxes below.
+
+    - Texas appraiser offices
+        https://comptroller.texas.gov/taxes/property-tax/county-directory/
+
+    - Texas has no state property tax. The Comptroller's office does not collect property tax or set tax rates. 
+        --That's up to local taxing units, which use tax revenue to provide local services incl
+        https://comptroller.texas.gov/taxes/property-tax/
+
+    - Create web to Excel query in Texa files
+        -https://www.sos.state.tx.us/elections/voter/tac.shtml
+
+        
+-
+
+# Complete state wide information on Virginia sheet
+    --Open NADA marketing list 
+        cd c:\projects\govt\; dir;
+        start NADA_states_marketing_list.xlsx
+
+    - Virginia Department of Motor Vehicles
+        https://www.dmv.virginia.gov/vehicles/#sut.asp
+
+        -- Y, Use tax of 4.15% SUT	
+	    -- Y, 4.13 per $100 of assessed value.
+
+        --Virginia is required to collect a 4.15% Sales and Use Tax (SUT) at the time of titling whenever a vehicle is sold, and/or the ownership of the vehicle changes.
+
+        --Calculating the SUT Tax
+            For a transaction between private individuals, the seller is responsible for calculating the SUT and including it in the invoice. 
+            Sellers should base the SUT on the trade-in value listed in the NADA Official Used Car Guide, or charge $75, whichever is greater.
+
+    - Title and register boat in Virginia
+            https://dwr.virginia.gov/boating/registration/
+
+
+# Salem, VA commissioner of revenue
+    - Property tax message
+        https://salemva.gov/CivicAlerts.aspx?AID=175
+
+        --NADA as recognized pricing guide
+                The Code of Virginia §58.1-3503 requires the Commissioner of the Revenue to value personal property by means of a recognized pricing guide.  
+                The City of Salem uses JD Power car guides (formerly NADA) to determine the value of vehicles at the clean loan value as of January 1st of each year. 
+                This assessment method has been used by the Commissioner of the Revenue’s office for over 25 years and the value used is generally one of the lowest in the guide. 
+
+        --Commisioner of the Revenue
+            Kristie D. Chittum
+            ommissioner of the Revenue
+            commissioner@salemva.gov
+        
+            City of Salem
+            540-375-3019
+
+            114 N. Broad Street
+            Salem, VA 24153
+
+# West Virginia
+    - West Virginia Tax Division
+        - https://tax.wv.gov/Pages/default.aspx
+
+    - Sales Tax in West Virginia
+        https://transportation.wv.gov/DMV/Vehicle-Services/Titles/Pages/default.aspx#:~:text=Fees%20required%20to%20title%20a,and%2For%20registration%20transfer%20fee.
+
+        if the vehicle is purchased from an individual and the purchase price is below 50% of the current NADA Clean Loan Book value, a notarized bill of sale must accompany the application for title, or the tax will be assessed on the NADA Clean Loan Book value.
+
+        If the vehicle is purchased from an individual and the purchase price is above 50%, the tax will be assessed on that price. Any vehicle not purchased from a registered dealer which is two years old or less w
+        ill be taxed on the current NADA Clean Loan Book value despite the purchase price, a notarized bill of sale will not be accepted.
+
+
+    - Municipal sales and use tax
+        https://tax.wv.gov/Business/SalesAndUseTax/MunicipalSalesAndUseTax/Pages/MunicipalSalesAndUseTax.aspx
+
+        Municipal sales and use tax does not apply to the sale or long term lease of motor vehicles Sales of motor vehicles are subject to the 5% DMV sales tax.
+
+        Who manages the NADA subscription at West Virginia Dpartment of Taxation
+
+    - West Virginia County assessors
+        https://tax.wv.gov/Business/PropertyTax/Pages/PropertyTaxCountyAssessors.aspx
+
+
+    - Raleigh County Assessor
+        - https://raleighcountyassessor.com/personal-property-2/vehicles/
+
+        Personal Property is assessed at 60% of the loan value from the NADA (National Automobile Dealers Association (NADA) book as mandated
+         by the State Tax Commissioner.  Examples include cars, trucks, motorcycles, ATV’s, motor homes, campers, boats trailers etc.  
+        State law requires that residents pay yearly taxes on these types of property even if such property is not licensed but still titled with the DMV (Dept. of Motor Vehicles). 
+        
+    - WV state Tax Department has contracted with the NADA to assess your vehicle
+        The West Virginia State Tax Department is required to value vehicles by using a nationally recognized organization which establishes values of used vehicles.
+
+        The WV State Tax Department has contracted with the National Automobile Dealers Association (NADA) and uses its July edition. 
+        Of the three values that appear for each vehicle (retail, trade-in, or loan), the state uses the lowest value, which is loan, 
+        to assess your vehicle. NADA produces computer software which matches a vehicle value to each vehicle identification number (VIN). 
+        The Harrison County Assessor’s Office enters the VIN in the State computer network for each vehicle. The computer in Charleston reads the VIN and then assigns the loan value to that specific vehicle. There is no consideration given to high or low mileage, body condition, add-on options, etc. You are taxed only on the basic model. Since West Virginia taxes 60% of the market value, the computer takes 60% of the loan value and applies the appropriate levy rate.
+
+-
+-
+
+
+-
+# Vermont
+    - Vermont Department of Taxes
+        https://dmv.vermont.gov/tax-title/vehicle-taxation
+        133 State Street	Montpelier	VT	05633	
+    
+    - Valuation against NADA
+        Purchase and Use Tax is due at the time of registration and/or title at a percentage of the purchase price or the National Automobile Dealers Association (NADA) 
+        clean trade-in value, whichever is greater, minus the value of the trade-in vehicle or any other allowable credit. 
+
